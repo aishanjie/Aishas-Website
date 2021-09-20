@@ -2,19 +2,15 @@
 title: "Assignments"
 output:
   html_document:
-    toc: true
-    toc_float: true
-    collapsed: false
-    number_sections: false
+    toc: yes
+    toc_float: yes
+    collapsed: no
+    number_sections: no
     toc_depth: 1
-    #code_folding: hide
+  pdf_document:
+    toc: no
+    toc_depth: '1'
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
-```
-
-
 
 
 This page will contain all the assignments you submit for the class.
@@ -60,29 +56,23 @@ Install the datasets package on the console below using `install.packages("datas
 
 
 ```{r}
+options(repos = list(CRAN="http://cran.rstudio.com/"))
 install.packages ("dataset_load")
 #setwd(~/Documents/Github/Aishas-Website/)
 ```
 
 Load the USArrests dataset and rename it `dat`. Note that this dataset comes with R, in the package datasets, so there's no need to load data from your computer. Why is it useful to rename the dataset?
 
-```
 ```{r}
-library(readr)
-simulated_crime <- read_csv("~/Documents/GitHub/simulated-crime.csv")
-View(simulated_crime)
+dat <- USArrests
 ```
-```{r}
-file.rename(simulated-crime.csv,dat)
-```
-
 
 
 ### Problem 2
 
 Use this command to make the state names into a new variable called State. 
 
-```{r, eval=FALSE}
+```{r}
 dat$state <- tolower(rownames(USArrests))
 ```
 
