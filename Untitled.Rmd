@@ -1,5 +1,5 @@
 ---
-title: "Assignments"
+title: "Assignment 1 Final"
 output:
   html_document:
     toc: yes
@@ -30,7 +30,6 @@ I want you to submit your assignment as a PDF, so I can keep a record of what th
 4. Produce a PDF file with your answers. To do this, knit to PDF (use Knit button at the top of RStudio), locate the PDF file in your docs folder (it's in the same folder as the Rproj), and submit that on on Canvas in Assignment 1.
 
 5. Build Website, go to GitHub desktop, commit and push. Now your solutions should be on your website as well.
-
 
 
 
@@ -115,12 +114,12 @@ summary(dat$Murder)
 ```
 #The mean is 7.788 and the median is 7.250. Mean is the average of the data set. It is found by adding all the numbers in the data set and then dividing by the number of values in the set. The median is the middle value when a data set is ordered from least to greatest. A quartile is a type of quantile which divides the data set into four parts. You can deduce the interquartile range (IQR) from Q1 and Q3 and this is significant because the IQR, also known as the midspread/middle 50%/H spread is a measure of statistical dispersion or the variability in a data set. 
 
-### Problem 7
+### Problem 7 (a)
 
-Repeat the same steps you followed for `Murder`, for the variables `Assault` and `Rape`. Now plot all three histograms together. You can do this by using the command `par(mfrow=c(3,1))` and then plotting each of the three. 
+Repeat the same steps you followed for `Murder`, for the variables `Assault` and `Rape`. 
 
 ```{r, eval=TRUE}
-hist(dat$Assault)
+hist(dat$Assault, main="Histogram of Assault", xlab="Arrests per 100,000 Residents", ylab="Frequency")
 ```
 ```{r}
 summary(dat$Assault)
@@ -128,12 +127,16 @@ summary(dat$Assault)
 #The mean is 170.8 and the median is 159.0. 
 
 ```{r, eval=TRUE}
-hist(dat$Rape)
+hist(dat$Rape, main="Histogram of Rape", xlab="Arrests per 100,000 Residents", ylab="Frequency")
 ```
 ```{r, eval=TRUE}
 summary(dat$Rape)
 ```
 #The mean is 21.23 and the median is 20.10. 
+
+### Problem 7 (b)
+
+Now plot all three histograms together. You can do this by using the command `par(mfrow=c(3,1))` and then plotting each of the three. 
 ```{r, eval=TRUE}
 par(mfrow=c(3,1))
 hist(dat$Murder, main="Histogram of Murder", xlab="Arrests per 100,000 Residents", ylab="Frequency")
@@ -185,5 +188,6 @@ $$\\[2in]$$
 # Assignment 2 
 
 (Coming soon)
+
 
 
