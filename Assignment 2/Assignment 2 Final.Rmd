@@ -8,13 +8,13 @@
 # Set your working directory to the folder where you downloaded the data.
 
 ```{r}
-setwd("/Users/isatounjie/Documents/Assignment 2") 
+setwd("/Users/isatounjie/Documents/GitHub/Aishas-Website/Assignment 2")
 ```
 
 # Read the data
 
 ```{r}
-dat <- read.csv("dat.nsduh.small.csv") 
+dat <- read.csv("dat.nsduh.small.csv")
 ```
 
 # What are the dimensions of the dataset? 

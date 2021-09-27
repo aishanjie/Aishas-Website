@@ -6,7 +6,7 @@
 # Problem 1: Load data
 
 # Set your working directory to the folder where you downloaded the data.
-setwd("/Users/isatounjie/Documents/Assignment 2") 
+setwd("/Users/isatounjie/Documents/GitHub/Aishas-Website/Assignment 2")
 
 # Read the data
 dat <- read.csv("dat.nsduh.small.csv") 
