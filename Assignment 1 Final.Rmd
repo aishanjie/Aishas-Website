@@ -1,15 +1,6 @@
 ---
 title: "Assignment 1 Final"
-output:
-  html_document:
-    toc: yes
-    toc_float: yes
-    collapsed: no
-    number_sections: no
-    toc_depth: 1
-  pdf_document:
-    toc: no
-    toc_depth: '1'
+output: html_document
 ---
 
 
@@ -47,8 +38,6 @@ Install the datasets package on the console below using `install.packages("datas
 ```{r}
 options(repos = list(CRAN="http://cran.rstudio.com/"))
 #install.packages ("dataset_load")
-
-library(datasets)
 ```
 
 Load the USArrests dataset and rename it `dat`. Note that this dataset comes with R, in the package datasets, so there's no need to load data from your computer. Why is it useful to rename the dataset?
@@ -137,6 +126,7 @@ summary(dat$Rape)
 ### Problem 7 (b)
 
 Now plot all three histograms together. You can do this by using the command `par(mfrow=c(3,1))` and then plotting each of the three. 
+
 ```{r, eval=TRUE}
 par(mfrow=c(3,1))
 hist(dat$Murder, main="Histogram of Murder", xlab="Arrests per 100,000 Residents", ylab="Frequency")
@@ -162,6 +152,7 @@ In the console below (not in text), type `install.packages("maps")` and press En
 
 Run this code:
 
+
 ```{r, eval = FALSE, fig.width = 7.5, fig.height = 4}
 install.packages("maps")
 install.packages("ggplot2")
@@ -172,6 +163,7 @@ library(ggplot2)
 ggplot(dat, aes(map_id=state, fill=Murder)) + 
   geom_map(map=map_data("state")) + 
   expand_limits(x=map_data("state")$long, y=map_data("state")$lat)
+```
 ```
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 60), tidy = TRUE)
