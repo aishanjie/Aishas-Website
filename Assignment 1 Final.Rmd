@@ -2,10 +2,10 @@
 title: "Assignment 1 Final"
 output: html_document
 ---
-
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 This page will contain all the assignments you submit for the class.
-
 
 
 ### Instructions for all assignments
@@ -144,14 +144,13 @@ What does the command par do, in your own words (you can look this up by asking 
 
 What can you learn from plotting the histograms together?
 
-Answer: By plotting the histogams together, we can observe the scale at which the different crimes occurred. You can compare the frequencies across the different crimes too. For example, we can see that murder and rape occur at lower rates, while assault cases occur much more. 
+Answer: By plotting the histogams together, we can observe the scale at which the different crimes occurred. You can compare the frequencies across the different crimes too.
 
 ### Problem 8
 
 In the console below (not in text), type `install.packages("maps")` and press Enter, and then type `install.packages("ggplot2")` and press Enter. This will install the packages so you can load the libraries.
 
 Run this code:
-
 
 ```{r, eval = FALSE, fig.width = 7.5, fig.height = 4}
 install.packages("maps")
@@ -165,18 +164,10 @@ ggplot(dat, aes(map_id=state, fill=Murder)) +
   expand_limits(x=map_data("state")$long, y=map_data("state")$lat)
 ```
 ```
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 60), tidy = TRUE)
 
 What does this code do? Explain what each line is doing.
 
-Answer:
-
-$$\\[2in]$$
-
-
-
-
+Answer: The first line determines the dimensions of the graph. The second and third line installs the package necessary to make the graph, specifically a map. The fourth and fifth lines load the library of the two packages necessary to construct a map. The sixth lines tells the map to only include states and the frequency of Murder in each state. The last three lines serves as the data frame that contains the map coordinates. 
 # Assignment 2 
 
 (Coming soon)
