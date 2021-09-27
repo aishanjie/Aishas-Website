@@ -55,7 +55,7 @@ Load the USArrests dataset and rename it `dat`. Note that this dataset comes wit
 dat <- USArrests
 ```
 
-# Answer: It is useful to rename datasets because it is good practice and it is more convenient to use instead of the full names of data sets which are usually longer. Also, might reduce errors in using a short and simple name such as dat. 
+Answer: It is useful to rename datasets because it is good practice and it is more convenient to use instead of the full names of data sets which are usually longer. Also, might reduce errors in using a short and simple name such as dat. 
 
 
 ### Problem 2
@@ -74,26 +74,26 @@ List the variables contained in the dataset `USArrests`.
 ```{r}
 names(dat)
 ```
-# The five variables are Murder, Assault, UrbanPop, Rape, and State.
+The five variables are Murder, Assault, UrbanPop, Rape, and State.
 
 ### Problem 3 
 
 What type of variable (from the DVB chapter) is `Murder`? 
 
-# Answer: Murder is a quantitative variable.
+Answer: Murder is a quantitative variable.
 
 What R Type of variable is it?
 
 ```{r}
 class(dat$Murder)
 ```
-#Answer: Murder is a numeric value. 
+Answer: Murder is a numeric value. 
 
 ### Problem 4
 
 What information is contained in this dataset, in general? What do the numbers mean? 
 
-#Answer: This dataset includes the number of murder, assault, urbanpop, and rape cases throughout 50 states. The datasets relies on the recorded cases of crimes that offenders/criminals commit. It was most likely collected from the series of reported crime statisitcs on the internet or perhaps even the Federal Bureau of Justice Statistics. The numbers represent the frequency of that crime for each state. I assume that reserchers of crime rates,statiticians in the field of law enforcement or legal justice created this dataset to compare crime rates across the U.S. but also the frequency of the different crimes against each other.
+Answer: This dataset includes the number of murder, assault, urbanpop, and rape cases throughout 50 states. The datasets relies on the recorded cases of crimes that offenders/criminals commit. It was most likely collected from the series of reported crime statisitcs on the internet or perhaps even the Federal Bureau of Justice Statistics. The numbers represent the frequency of that crime for each state. I assume that reserchers of crime rates,statiticians in the field of law enforcement or legal justice created this dataset to compare crime rates across the U.S. but also the frequency of the different crimes against each other.
 
 ### Problem 5
 
@@ -110,7 +110,8 @@ Please summarize `Murder` quantitatively. What are its mean and median? What is 
 ```{r, eval=TRUE}
 summary(dat$Murder)
 ```
-#The mean is 7.788 and the median is 7.250. Mean is the average of the data set. It is found by adding all the numbers in the data set and then dividing by the number of values in the set. The median is the middle value when a data set is ordered from least to greatest. A quartile is a type of quantile which divides the data set into four parts. You can deduce the interquartile range (IQR) from Q1 and Q3 and this is significant because the IQR, also known as the midspread/middle 50%/H spread is a measure of statistical dispersion or the variability in a data set. 
+
+The mean is 7.788 and the median is 7.250. Mean is the average of the data set. It is found by adding all the numbers in the data set and then dividing by the number of values in the set. The median is the middle value when a data set is ordered from least to greatest. A quartile is a type of quantile which divides the data set into four parts. You can deduce the interquartile range (IQR) from Q1 and Q3 and this is significant because the IQR, also known as the midspread/middle 50%/H spread is a measure of statistical dispersion or the variability in a data set. 
 
 ### Problem 7 (a)
 
@@ -122,7 +123,8 @@ hist(dat$Assault, main="Histogram of Assault", xlab="Arrests per 100,000 Residen
 ```{r}
 summary(dat$Assault)
 ```
-#The mean is 170.8 and the median is 159.0. 
+
+The mean is 170.8 and the median is 159.0. 
 
 ```{r, eval=TRUE}
 hist(dat$Rape, main="Histogram of Rape", xlab="Arrests per 100,000 Residents", ylab="Frequency")
@@ -130,7 +132,8 @@ hist(dat$Rape, main="Histogram of Rape", xlab="Arrests per 100,000 Residents", y
 ```{r, eval=TRUE}
 summary(dat$Rape)
 ```
-#The mean is 21.23 and the median is 20.10. 
+
+The mean is 21.23 and the median is 20.10. 
 
 ### Problem 7 (b)
 
@@ -149,13 +152,13 @@ What does the command par do, in your own words (you can look this up by asking 
 ?par
 ```
 
-#Answer: par can be used to set either give you information about graphs and/or let you set parameters for graphs. 
+Answer: par can be used to set either give you information about graphs and/or let you set parameters for graphs. 
 
 What can you learn from plotting the histograms together?
 
 Answer: By plotting the histogams together, we can observe the scale at which the different crimes occurred. You can compare the frequencies across the different crimes too.
 
-### Problem 8
+ Problem 8
 
 In the console below (not in text), type `install.packages("maps")` and press Enter, and then type `install.packages("ggplot2")` and press Enter. This will install the packages so you can load the libraries.
 
@@ -181,24 +184,25 @@ Answer: The first line determines the dimensions of the graph. The second and th
 
 # Problem 1: Load data
 
-# Set your working directory to the folder where you downloaded the data.
+Set your working directory to the folder where you downloaded the data.
 
 ```{r, eval=FALSE}
 setwd("/Users/isatounjie/Documents/GitHub/Aishas-Website/Assignment 2")
 ```
 
-# Read the data
+Read the data
 
 ```{r}
 dat <- read.csv("dat.nsduh.small.1.csv")
 ```
 
-# What are the dimensions of the dataset? 
+What are the dimensions of the dataset? 
+
 ```{r}
 names(dat)
 ```
 
-#Answer: The dimensions of the dataset are mjage, cigever, alecever, AGE2, sexatract, speakengl, and irsex. 
+Answer: The dimensions of the dataset are mjage, cigever, alecever, AGE2, sexatract, speakengl, and irsex. 
 
 ## Problem 2: Variables
 
@@ -212,27 +216,31 @@ class(dat$speakengl)
 class(dat$irsex)
 ```
 
-# Describe the variables in the dataset.
-#Answer: It appears that mjage, cigage, iralcage, AGE2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
+ Describe the variables in the dataset.
 
-# What is this dataset about? Who collected the data, what kind of sample is it, and what was the purpose of generating the data?
-#Answer: This dataset observes the age at which participants first tried marijuana, first started smoking cigarettes every day,first tried alcohol, what they identify as in terms of gender, their sexual attraction,  how well they speak English as well as the final recorded age of the participants. The data was collected from The National Survey on Drug Use and Health, specifically RTI International. Even though participants are selected and then interviewed, I believe this is an example of simple random sampling. Paticipants aren't chosen just because they fit a certain criteria. 
+Answer: It appears that mjage, cigage, iralcage, AGE2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
+
+ What is this dataset about? Who collected the data, what kind of sample is it, and what was the purpose of generating the data?
+
+Answer: This dataset observes the age at which participants first tried marijuana, first started smoking cigarettes every day,first tried alcohol, what they identify as in terms of gender, their sexual attraction,  how well they speak English as well as the final recorded age of the participants. The data was collected from The National Survey on Drug Use and Health, specifically RTI International. Even though participants are selected and then interviewed, I believe this is an example of simple random sampling. Paticipants aren't chosen just because they fit a certain criteria. 
 
 ## Problem 3: Age and gender
 
-# What is the age distribution of the sample like? Make sure you read the codebook to know what the variable values mean.
-#Answer: Ranges 1-10 signify a participant at one, specific age, however ranges 11-12 signify an option between two ages, and ranges 13-16 signify a range of ages. 17 signifies the largest range with participants that are 65 or older. 
+ What is the age distribution of the sample like? Make sure you read the codebook to know what the variable values mean.
+ 
+Answer: Ranges 1-10 signify a participant at one, specific age, however ranges 11-12 signify an option between two ages, and ranges 13-16 signify a range of ages. 17 signifies the largest range with participants that are 65 or older. 
 
-# Do you think this age distribution representative of the US population? Why or why  not?
-#Answer: Yes, I believe this is representative of the US population in the context of this study. Children start experimenting (in terms of drugs, sex, and alcohol) around the age of 12. Also, it is unlikely to receive parental consent for a study like this for children that are too young. 
+Do you think this age distribution representative of the US population? Why or why  not?
 
-# Is the sample balanced in terms of gender? If not, are there more females or males?
+Answer: Yes, I believe this is representative of the US population in the context of this study. Children start experimenting (in terms of drugs, sex, and alcohol) around the age of 12. Also, it is unlikely to receive parental consent for a study like this for children that are too young. 
+
+ Is the sample balanced in terms of gender? If not, are there more females or males?
 ```{r}
 hist(dat$irsex)
 ```
-#Answer: This sample is balanced, there are 200 participants that identify as female and 200 that identify as male.
+Answer: This sample is balanced, there are 200 participants that identify as female and 200 that identify as male.
 
-# Use this code to draw a stacked bar plot to view the relationship between sex and age. What can you conclude from this plot?
+ Use this code to draw a stacked bar plot to view the relationship between sex and age. What can you conclude from this plot?
 
 ```{r, eval=TRUE}
 table(dat$age2,dat$irsex)
@@ -244,7 +252,7 @@ barplot(tab.agesex,
         beside = FALSE) # Stacked bars (default)
     ```
         
-#Answer: There seems to be an equal spread in age regardless of gender. However, the frequency of older-aged women is slightly higher than that of men.  
+Answer: There seems to be an equal spread in age regardless of gender. However, the frequency of older-aged women is slightly higher than that of men.  
 
 ## Problem 4: Substance use
 
@@ -254,10 +262,11 @@ table(dat$age2,dat$cigage)
 table(dat$age2,dat$iralcage)
 ```
 
-# For which of the three substances included in the dataset (marijuana, alcohol, and cigarettes) do individuals tend to use the substance earlier?
-#Individuals tend to use alcohol earliest. 
+ For which of the three substances included in the dataset (marijuana, alcohol, and cigarettes) do individuals tend to use the substance earlier?
+ 
+Individuals tend to use alcohol earliest. 
 
-#CHECKING ANSWER
+CHECKING ANSWER
 
 ```{r}
 table(dat$age2,dat$mjage)
@@ -269,7 +278,7 @@ barplot(tab.agemjage,
         beside = FALSE) # Stacked bars (default)
     ```
 
-#Earliest age range is 7. 
+Earliest age range is 7. 
 
 ```{r}
 table(dat$age2,dat$cigage)
@@ -281,7 +290,7 @@ barplot(tab.agecigage,
         beside = FALSE) # Stacked bars (default)
     ```
 
-#Earliest age range is 6. 
+Earliest age range is 6. 
 
 ```{r}
 table(dat$age2,dat$iralcage)
@@ -293,13 +302,13 @@ barplot(tab.ageiralcage,
         beside = FALSE) # Stacked bars (default)
     ```
 
-#Earliest age range is 6. 
-#Alcohol and cigarettes start at the same age range, but the interval in alcohol's barchat is bigger, so more individuals start alcohol earlier.
+Earliest age range is 6. 
+Alcohol and cigarettes start at the same age range, but the interval in alcohol's barchat is bigger, so more individuals start alcohol earlier.
 
 
 ## Problem 5: Sexual attraction
 
-# What does the distribution of sexual attraction look like? Is this what you expected?
+What does the distribution of sexual attraction look like? Is this what you expected?
 
 ```{r}
 table(dat$irsex,dat$sexatract)
@@ -311,14 +320,15 @@ barplot(tab.irsexatract,
         beside = FALSE) # Stacked bars (default)
     ```
         
-#Answer: There seems to be an equal distribution among men and women for "I am only attracted to the oppisote sex." From there, the numbers are very low with individuals in 97, 98, 99 not even answering the question. I am not surprised. There's a great deal of non-binary, intersex, transgender, and other sexual identities outside of male and female that aren't accounted for. Furthermore, these individuals left out would most likely not be in the first category, thus evening out the distribution of the data. 
+Answer: There seems to be an equal distribution among men and women for "I am only attracted to the oppisote sex." From there, the numbers are very low with individuals in 97, 98, 99 not even answering the question. I am not surprised. There's a great deal of non-binary, intersex, transgender, and other sexual identities outside of male and female that aren't accounted for. Furthermore, these individuals left out would most likely not be in the first category, thus evening out the distribution of the data. 
 
-# What is the distribution of sexual attraction by gender? 
-#Answer: There's an equal number of men and women who are only attracted to the same sex. More women stated that there are mostly attracted to the same sex, equally attracted to the oppisote sex, and mostly attracted to same sex while more men stated that there are only attracted to the same sex and not sure. More women refused to answer, but more men left the question blank and or skipped it. 
+What is the distribution of sexual attraction by gender? 
+
+Answer: There's an equal number of men and women who are only attracted to the same sex. More women stated that there are mostly attracted to the same sex, equally attracted to the oppisote sex, and mostly attracted to same sex while more men stated that there are only attracted to the same sex and not sure. More women refused to answer, but more men left the question blank and or skipped it. 
 
 ## Problem 6: English speaking
 
-# What does the distribution of English speaking look like in the sample? Is this what you might expect for a random sample of the US population?
+What does the distribution of English speaking look like in the sample? Is this what you might expect for a random sample of the US population?
 
 ```{r}
 table(dat$irsex,dat$speakengl)
@@ -330,9 +340,10 @@ barplot(tab.irsexspeakengl,
         beside = FALSE) # Stacked bars (default)
     ```
         
-#Answer: There is an extremely high frequency of individuals that can speak english very well. A small percentage of individuals refused or left this question blank. Another small group of individuals stated they spoke english well. 
+Answer: There is an extremely high frequency of individuals that can speak english very well. A small percentage of individuals refused or left this question blank. Another small group of individuals stated they spoke english well. 
 
-# Are there more English speaker females or males?
-#Answer: There are more female English speakers. 
+Are there more English speaker females or males?
+
+Answer: There are more female English speakers. 
 
 
