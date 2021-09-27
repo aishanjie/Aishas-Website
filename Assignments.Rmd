@@ -182,7 +182,7 @@ Answer: The first line determines the dimensions of the graph. The second and th
 
 # Assignment 2 
 
-# Problem 1: Load data
+Problem 1: Load data
 
 Set your working directory to the folder where you downloaded the data.
 
