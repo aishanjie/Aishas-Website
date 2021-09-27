@@ -2,7 +2,7 @@ name: "Aisha's Website"
 navbar:
   title: "Aisha's Website"
   left:
-    - text: "Home"
+    - text: "Index"
       href: index.html
     - text: "Assignments"
       href: Assignments.html
