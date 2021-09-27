@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 This page will contain all the assignments you submit for the class.
 
-
+test
 ### Instructions for all assignments
 
 I want you to submit your assignment as a PDF, so I can keep a record of what the code looked like that day. I also want you to include your answers on your personal GitHub website. This will be good practice for editing your website and it will help you produce something you can keep after the class is over.
