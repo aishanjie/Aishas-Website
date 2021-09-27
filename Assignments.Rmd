@@ -204,16 +204,16 @@ names(dat)
 
 ```{r}
 class(dat$mjage)
-class(dat$cigever)
-class(dat$alcever)
-class(dat$AGE2)
+class(dat$cigage)
+class(dat$iralcage)
+class(dat$age2)
 class(dat$sexatract)
 class(dat$speakengl)
 class(dat$irsex)
 ```
 
 # Describe the variables in the dataset.
-#Answer: It appears that mjage, cigever, alcever, AGE2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
+#Answer: It appears that mjage, cigage, iralcage, AGE2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
 
 # What is this dataset about? Who collected the data, what kind of sample is it, and what was the purpose of generating the data?
 #Answer: This dataset observes the age at which participants first tried marijuana, first started smoking cigarettes every day,first tried alcohol, what they identify as in terms of gender, their sexual attraction,  how well they speak English as well as the final recorded age of the participants. The data was collected from The National Survey on Drug Use and Health, specifically RTI International. Even though participants are selected and then interviewed, I believe this is an example of simple random sampling. Paticipants aren't chosen just because they fit a certain criteria. 
@@ -234,9 +234,9 @@ hist(dat$irsex)
 
 # Use this code to draw a stacked bar plot to view the relationship between sex and age. What can you conclude from this plot?
 
-```{r}
-table(dat$AGE2,dat$irsex)
-tab.agesex <- table(dat$AGE2,dat$irsex)
+```{r, eval=TRUE}
+table(dat$age2,dat$irsex)
+tab.agesex <- table(dat$age2,dat$irsex)
 barplot(tab.agesex,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
@@ -249,9 +249,9 @@ barplot(tab.agesex,
 ## Problem 4: Substance use
 
 ```{r}
-table(dat$AGE2,dat$mjage)
-table(dat$AGE2,dat$cigever)
-table(dat$AGE2,dat$alcever)
+table(dat$age2,dat$mjage)
+table(dat$age2,dat$cigage)
+table(dat$age2,dat$iralcage)
 ```
 
 # For which of the three substances included in the dataset (marijuana, alcohol, and cigarettes) do individuals tend to use the substance earlier?
@@ -260,8 +260,8 @@ table(dat$AGE2,dat$alcever)
 #CHECKING ANSWER
 
 ```{r}
-table(dat$AGE2,dat$mjage)
-tab.agemjage <- table(dat$AGE2,dat$mjage)
+table(dat$age2,dat$mjage)
+tab.agemjage <- table(dat$age2,dat$mjage)
 barplot(tab.agemjage,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
@@ -272,24 +272,24 @@ barplot(tab.agemjage,
 #Earliest age range is 7. 
 
 ```{r}
-table(dat$AGE2,dat$cigever)
-tab.agecigever <- table(dat$AGE2,dat$cigever)
-barplot(tab.agecigever,
+table(dat$age2,dat$cigage)
+tab.agecigage <- table(dat$age2,dat$cigage)
+barplot(tab.agecigage,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
-        legend.text = rownames(tab.agecigever),
+        legend.text = rownames(tab.agecigage),
         beside = FALSE) # Stacked bars (default)
     ```
 
 #Earliest age range is 6. 
 
 ```{r}
-table(dat$AGE2,dat$alcever)
-tab.agealcever <- table(dat$AGE2,dat$alcever)
-barplot(tab.agealcever,
+table(dat$age2,dat$iralcage)
+tab.ageiralcage <- table(dat$age2,dat$iralcage)
+barplot(tab.ageiralcage,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
-        legend.text = rownames(tab.agealcever),
+        legend.text = rownames(tab.ageiralcage),
         beside = FALSE) # Stacked bars (default)
     ```
 
