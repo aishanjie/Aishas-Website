@@ -1,6 +1,7 @@
 ---
 title: "Assignment 1-Office Hours"
-output: html_document
+output:
+  pdf_document: default
 ---
 test
 ```{r setup, include=FALSE}
