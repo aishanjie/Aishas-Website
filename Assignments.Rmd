@@ -180,6 +180,12 @@ What does this code do? Explain what each line is doing.
 
 Answer: The first line determines the dimensions of the graph. The second and third line installs the package necessary to make the graph, specifically a map. The fourth and fifth lines load the library of the two packages necessary to construct a map. The sixth lines tells the map to only include states and the frequency of Murder in each state. The last three lines serves as the data frame that contains the map coordinates. 
 
+
+# Title: Assignment 2
+Crim 250: Statistics for the Social Sciences
+Name: Aisha Njie
+Date: 09/27/2021
+
 # Assignment 2 
 
 Problem 1: Load data
@@ -222,7 +228,7 @@ Answer: It appears that mjage, cigage, iralcage, AGE2, sexatract, and speakengl 
 
  What is this dataset about? Who collected the data, what kind of sample is it, and what was the purpose of generating the data?
 
-Answer: This dataset observes the age at which participants first tried marijuana, first started smoking cigarettes every day,first tried alcohol, what they identify as in terms of gender, their sexual attraction,  how well they speak English as well as the final recorded age of the participants. The data was collected from The National Survey on Drug Use and Health, specifically RTI International. Even though participants are selected and then interviewed, I believe this is an example of simple random sampling. Paticipants aren't chosen just because they fit a certain criteria. 
+Answer: This dataset observes the age at which participants first tried marijuana, first started smoking cigarettes every day,first tried alcohol, what they identify as in terms of gender, their sexual attraction,  how well they speak English as well as the final recorded age of the participants. The data was collected from The National Survey on Drug Use and Health, specifically RTI International. Even though participants are selected and then interviewed, I believe this is an example of simple random sampling. Participants aren't chosen just because they fit a certain criteria. 
 
 ## Problem 3: Age and gender
 
@@ -234,17 +240,21 @@ Do you think this age distribution representative of the US population? Why or w
 
 Answer: Yes, I believe this is representative of the US population in the context of this study. Children start experimenting (in terms of drugs, sex, and alcohol) around the age of 12. Also, it is unlikely to receive parental consent for a study like this for children that are too young. 
 
+*Correction: They cut off the survey at age 12 by design, not because they found people used drugs less below that age (although that is probably also true). There are other surveys of children's use of drugs. 
+
+
  Is the sample balanced in terms of gender? If not, are there more females or males?
 ```{r}
 hist(dat$irsex)
 ```
+
 Answer: This sample is balanced, there are 200 participants that identify as female and 200 that identify as male.
 
  Use this code to draw a stacked bar plot to view the relationship between sex and age. What can you conclude from this plot?
 
 ```{r, eval=TRUE}
-table(dat$age2,dat$irsex)
-tab.agesex <- table(dat$age2,dat$irsex)
+table(dat$irsex,dat$age2)
+tab.agesex <- table(dat$irsex,dat$age2)
 barplot(tab.agesex,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
@@ -257,9 +267,9 @@ Answer: There seems to be an equal spread in age regardless of gender. However, 
 ## Problem 4: Substance use
 
 ```{r}
-table(dat$age2,dat$mjage)
-table(dat$age2,dat$cigage)
-table(dat$age2,dat$iralcage)
+table(dat$mjage,dat$age2)
+table(dat$cigage,dat$age2)
+table(dat$iralcage,dat$age2)
 ```
 
  For which of the three substances included in the dataset (marijuana, alcohol, and cigarettes) do individuals tend to use the substance earlier?
@@ -269,8 +279,8 @@ Individuals tend to use alcohol earliest.
 CHECKING ANSWER
 
 ```{r}
-table(dat$age2,dat$mjage)
-tab.agemjage <- table(dat$age2,dat$mjage)
+table(dat$mjage,dat$age2)
+tab.agemjage <- table(dat$mjage,dat$age2)
 barplot(tab.agemjage,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
@@ -281,8 +291,8 @@ barplot(tab.agemjage,
 Earliest age range is 7. 
 
 ```{r}
-table(dat$age2,dat$cigage)
-tab.agecigage <- table(dat$age2,dat$cigage)
+table(dat$cigage,dat$age2)
+tab.agecigage <- table(dat$cigage,dat$age2)
 barplot(tab.agecigage,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
@@ -293,8 +303,8 @@ barplot(tab.agecigage,
 Earliest age range is 6. 
 
 ```{r}
-table(dat$age2,dat$iralcage)
-tab.ageiralcage <- table(dat$age2,dat$iralcage)
+table(dat$iralcage,dat$age2)
+tab.ageiralcage <- table(dat$iralcage,dat$age2)
 barplot(tab.ageiralcage,
         main = "Stacked barchart",
         xlab = "Age category", ylab = "Frequency",
@@ -311,8 +321,8 @@ Alcohol and cigarettes start at the same age range, but the interval in alcohol'
 What does the distribution of sexual attraction look like? Is this what you expected?
 
 ```{r}
-table(dat$irsex,dat$sexatract)
-tab.irsexatract <- table(dat$irsex,dat$sexatract)
+table(dat$sexatract,dat$irsex)
+tab.irsexatract <- table(dat$sexatract,dat$irsex)
 barplot(tab.irsexatract,
         main = "Stacked barchart",
         xlab = "Sexual Attraction", ylab = "Frequency",
@@ -331,8 +341,8 @@ Answer: There's an equal number of men and women who are only attracted to the s
 What does the distribution of English speaking look like in the sample? Is this what you might expect for a random sample of the US population?
 
 ```{r}
-table(dat$irsex,dat$speakengl)
-tab.irsexspeakengl <- table(dat$irsex,dat$speakengl)
+table(dat$speakengl,dat$irsex)
+tab.irsexspeakengl <- table(dat$speakengl,dat$irsex)
 barplot(tab.irsexspeakengl,
         main = "Stacked barchart",
         xlab = "Speak English", ylab = "Frequency",
