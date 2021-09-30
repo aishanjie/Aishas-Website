@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 This page will contain all the assignments you submit for the class.
 
+TEST
 
 ### Instructions for all assignments
 
