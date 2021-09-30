@@ -1,7 +1,3 @@
-# Title: Assignment 2
-Crim 250: Statistics for the Social Sciences
-Name: Aisha Njie
-Date: 09/27/2021
 
 # Assignment 2 
 
@@ -25,7 +21,7 @@ What are the dimensions of the dataset?
 names(dat)
 ```
 
-Answer: The dimensions of the dataset are mjage, cigever, alecever, AGE2, sexatract, speakengl, and irsex. 
+Answer: The dimensions of the dataset are mjage, cigage, iralcage, age2, sexatract, speakengl, and irsex. 
 
 ## Problem 2: Variables
 
@@ -41,7 +37,7 @@ class(dat$irsex)
 
  Describe the variables in the dataset.
 
-Answer: It appears that mjage, cigage, iralcage, AGE2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
+Answer: It appears that mjage, cigage, iralcage, age2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
 
  What is this dataset about? Who collected the data, what kind of sample is it, and what was the purpose of generating the data?
 

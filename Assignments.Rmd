@@ -181,15 +181,6 @@ What does this code do? Explain what each line is doing.
 Answer: The first line determines the dimensions of the graph. The second and third line installs the package necessary to make the graph, specifically a map. The fourth and fifth lines load the library of the two packages necessary to construct a map. The sixth lines tells the map to only include states and the frequency of Murder in each state. The last three lines serves as the data frame that contains the map coordinates. 
 
 
-# Title: Assignment 2
-Crim 250: Statistics for the Social Sciences
-Name: Aisha Njie
-Date: 09/27/2021
-
-# Title: Assignment 2
-Crim 250: Statistics for the Social Sciences
-Name: Aisha Njie
-Date: 09/27/2021
 
 # Assignment 2 
 
@@ -213,7 +204,7 @@ What are the dimensions of the dataset?
 names(dat)
 ```
 
-Answer: The dimensions of the dataset are mjage, cigever, alecever, AGE2, sexatract, speakengl, and irsex. 
+Answer: The dimensions of the dataset are mjage, cigage, iralcage, age2, sexatract, speakengl, and irsex. 
 
 ## Problem 2: Variables
 
@@ -229,7 +220,7 @@ class(dat$irsex)
 
  Describe the variables in the dataset.
 
-Answer: It appears that mjage, cigage, iralcage, AGE2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
+Answer: It appears that mjage, cigage, iralcage, age2, sexatract, and speakengl are all ordinal variables and irsex is a categorical variable. It could also be regarded as an ordinal variable. In terms of r type, they are all intergers.  
 
  What is this dataset about? Who collected the data, what kind of sample is it, and what was the purpose of generating the data?
 
