@@ -61,11 +61,12 @@ Answer: Yes, I believe this is representative of the US population in the contex
 
 
  Is the sample balanced in terms of gender? If not, are there more females or males?
+ 
 ```{r}
 hist(dat$irsex)
 ```
 
-Answer: This sample is balanced, there are 200 participants that identify as female and 200 that identify as male.
+Answer: This sample is nearly balanced, there are 91 participants that identify as male and 80 that identify as female.
 
  Use this code to draw a stacked bar plot to view the relationship between sex and age. What can you conclude from this plot?
 
@@ -79,21 +80,18 @@ barplot(tab.agesex,
         beside = FALSE) # Stacked bars (default)
     ```
         
-Answer: There seems to be an equal spread in age regardless of gender. However, the frequency of older-aged women is slightly higher than that of men.  
+Answer: In the youngest age group (4) and group 11, there is an even split. In  age groups 6, 7, 13, 14, 15, 16, and 17 there are more men than female, however in age groups 8, 9,10, and 12 there are more females. Men dominate the majority of all the age groups. 
 
 ## Problem 4: Substance use
 
-```{r}
-table(dat$mjage,dat$age2)
-table(dat$cigage,dat$age2)
-table(dat$iralcage,dat$age2)
-```
+*correction: table is not needed. just look at lowest value for all the different groups. 
+
+*why do the age values go past 17 for mjage, cigage, and iralcage. 
+*barplots don't actually help to see this, but I don't know how to get a breakdown of the data points within each group. 
 
  For which of the three substances included in the dataset (marijuana, alcohol, and cigarettes) do individuals tend to use the substance earlier?
  
 Individuals tend to use alcohol earliest. 
-
-CHECKING ANSWER
 
 ```{r}
 table(dat$mjage,dat$age2)
@@ -105,7 +103,7 @@ barplot(tab.agemjage,
         beside = FALSE) # Stacked bars (default)
     ```
 
-Earliest age range is 7. 
+Earliest age range is 8. 
 
 ```{r}
 table(dat$cigage,dat$age2)
@@ -117,7 +115,7 @@ barplot(tab.agecigage,
         beside = FALSE) # Stacked bars (default)
     ```
 
-Earliest age range is 6. 
+Earliest age range is 10. 
 
 ```{r}
 table(dat$iralcage,dat$age2)
@@ -129,13 +127,11 @@ barplot(tab.ageiralcage,
         beside = FALSE) # Stacked bars (default)
     ```
 
-Earliest age range is 6. 
-Alcohol and cigarettes start at the same age range, but the interval in alcohol's barchat is bigger, so more individuals start alcohol earlier.
-
+Earliest age range is 5. 
 
 ## Problem 5: Sexual attraction
 
-What does the distribution of sexual attraction look like? Is this what you expected?
+What does the distribution of sexual attraction look like? Is this what you expected? What is the distribution of sexual attraction by gender?
 
 ```{r}
 table(dat$sexatract,dat$irsex)
@@ -147,11 +143,7 @@ barplot(tab.irsexatract,
         beside = FALSE) # Stacked bars (default)
     ```
         
-Answer: There seems to be an equal distribution among men and women for "I am only attracted to the oppisote sex." From there, the numbers are very low with individuals in 97, 98, 99 not even answering the question. I am not surprised. There's a great deal of non-binary, intersex, transgender, and other sexual identities outside of male and female that aren't accounted for. Furthermore, these individuals left out would most likely not be in the first category, thus evening out the distribution of the data. 
-
-What is the distribution of sexual attraction by gender? 
-
-Answer: There's an equal number of men and women who are only attracted to the same sex. More women stated that there are mostly attracted to the same sex, equally attracted to the oppisote sex, and mostly attracted to same sex while more men stated that there are only attracted to the same sex and not sure. More women refused to answer, but more men left the question blank and or skipped it. 
+Answer: "I am only attracted to the oppisote sex" accounts for the majority of both males and females, however it accounts for nearly all men. From there, the numbers are very low. More women state they are as equally attracted to men as they are to other women. The difference is very minimal for those who selected "I am mostly attracted to same sex," "I am only attracted to same sex," I am not sure," and those who skipped the question. I am not surprised. There's a great deal of non-binary, intersex, transgender, and other sexual identities outside of male and female that aren't accounted for. Furthermore, these individuals left out would most likely not be in the first category, thus varying the data and evening out the distribution of the data. 
 
 ## Problem 6: English speaking
 
@@ -167,8 +159,8 @@ barplot(tab.irsexspeakengl,
         beside = FALSE) # Stacked bars (default)
     ```
         
-Answer: There is an extremely high frequency of individuals that can speak english very well. A small percentage of individuals refused or left this question blank. Another small group of individuals stated they spoke english well. 
+Answer: There is an extremely high frequency of individuals that can speak english very well. It accounts for nearly all men and women respectively. A small group of individuals stated they spoke english well (7 men and 1 woman) and 2 women stated they spoke english not well.
 
 Are there more English speaker females or males?
 
-Answer: There are more female English speakers. 
+Answer: There are more male English speakers. 

@@ -22,7 +22,7 @@ class(dat$irsex)
 
 
 hist(dat$irsex)
-
+table(dat$irsex)
 
 table(dat$irsex,dat$age2)
 tab.agesex <- table(dat$irsex,dat$age2)
