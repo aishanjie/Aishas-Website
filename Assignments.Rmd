@@ -344,3 +344,158 @@ Answer: There is an extremely high frequency of individuals that can speak engli
 Are there more English speaker females or males?
 
 Answer: There are more male English speakers. 
+
+#EXAM 1
+
+# Instructions
+
+a. Create a folder in your computer (a good place would be under Crim 250, Exams). 
+
+b. Download the dataset from the Canvas website (fatal-police-shootings-data.csv) onto that folder, and save your Exam 1.Rmd file in the same folder.
+
+c. Download the README.md file. This is the codebook. 
+
+d. Load the data into an R data frame.
+```{r}
+dat <- read.csv("fatal-police-shootings-data.csv")
+```
+
+
+# Problem 1 (10 points)
+
+a. Describe the dataset. This is the source: https://github.com/washingtonpost/data-police-shootings . Write two sentences (max.) about this.
+
+__The dataset looks at the records of every fatal shooting in the US by a police officer in the line of duty since January 1, 2015. Variables include a unique identifier for each victim, the name of the victim, the date of the fatal shooting in YYYY-MM-DD format, the manner of death (shot or shot and tasered), whether the victim was armed (armed, undetermined, unknown, or unarmed), the age, gender, and race of the victim, the city and state where the shooting took place, if the victim had any signs of mental illness, threat level, whether the victim fled (by foot, by car, or did not flee), whether there was a body camera, the latitude and longitude of the locattion, and finally whether the coordinates were accurate to the location of the shooting.   .__
+
+b. How many observations are there in the data frame?
+
+__By opening the data frame (not using r) I can see that there are 6,694 observations. (excel gives the number of rows, but I subtracted 1 because I didn't count the column titles as observations.) __
+
+c. Look at the names of the variables in the data frame. Describe what "body_camera", "flee", and "armed" represent, according to the codebook. Again, only write one sentence (max) per variable.
+
+__"body_camera" indicates whether the officer was wearing a body camera (represented in data frame as true or false). "flee" indicates whether the victim fled and if so how they fled (represented in data frame as foot, car, or not fleeing). "armed" indicates whether the victim was armed with some sort of implement that a police officer believed could inflict harm (represented in data frame as the weapon that qualified the victim as armed, undetermined, unknown, or unarmed).__
+
+d. What are three weapons that you are surprised to find in the "armed" variable? Make a table of the values in "armed" to see the options.
+```{r}
+table(dat$armed)
+```
+
+__I am surprised to see that toy weapon, binoculars, and microphone qualify a victim as "armed." None of these items are intended for harm, and even if attempted would probably not do much damage. Of course, the codebook does state that any item that the officer "believes" could do harm to him is included. His belief won't always be valid, as was the case for several of these cases. __ 
+
+# Problem 2 (10 points)
+
+a. Describe the age distribution of the sample. Is this what you would expect to see?
+```{r}
+hist(dat$age)
+summary(dat$age)
+```
+
+__The data is skewed to the right, meaning that most of the victims were towards the younger side. There are less cases of older victim and the peak age is between between 30 and 40. I expected the spread of data, however the minimum and maximum values were very surprising.__
+
+b. To understand the center of the age distribution, would you use a mean or a median, and why? Find the one you picked.
+```{r}
+hist(dat$age)
+summary(dat$age)
+```
+
+__I would use the median because the center of distribution is the median whereas the mean is the average of all the data points. The median is 35.00. There are some missing values, but since they are not assigned numeric values, they don't affect any analysis of my data, such as finding the median. __
+
+c. Describe the gender distribution of the sample. Do you find this surprising?
+```{r}
+table(dat$gender)
+tab.gender <- table(dat$gender)
+barplot(tab.gender,
+        main = "Stacked barchart",
+        xlab = "Gender", ylab = "Frequency",
+        legend.text = rownames(tab.gender),
+        beside = FALSE) # Stacked bars (default)
+```
+
+__There is about 21 times as much male victims as they are female victims. It is important to note that there are also 3 missing values, however not having these values do not impact the data because of how many more male victims there are in comparison to female victims. I am not surprised. I knew, before analyzing this data set, that men in the US are shot to death by the police more than women. __
+
+
+# Problem 3 (10 points)
+
+a. How many police officers had a body camera, according to news reports? What proportion is this of all the incidents in the data? Are you surprised that it is so high or low?
+
+```{r}
+table(dat$body_camera)
+```
+
+__910 police officers had a body camera, according to news reports.This is 13.6 % of all police officers. That is really surprising! It seems that having a body camera would be a measure of precaution for the officer that should be required, unless it is widely acknowledged that police often kill civilians for no just reason and so evidence on the body cameras would be damaging for the officers and that's the reason why they are not required or at least not worn.  __
+
+b. In  how many of the incidents was the victim fleeing? What proportion is this of the total number of incidents in the data? Is this what you would expect?
+```{r}
+table(dat$flee)
+tab.flee <- table(dat$flee)
+barplot(tab.flee,
+        main = "Barchart of Victims' Mode of Fleeing",
+        xlab = "Mode of Fleeing", ylab = "Frequency",
+        legend.text = rownames(tab.flee),
+        beside = FALSE) # Stacked bars (default)
+```
+
+__The data is not very clear with the different modes of fleeing. There are 248 cases that are categorized as "other" in terms of fleeing. There are also 491 cases that have missing values. Therefore, I will only consider those who fled by car or foot as fleeing and disregard the cases categorized as missing or other. There are 1903 victims that fled and this is 28.9% of all victims. I expected more victims to have fled, but because there is such a great number of values (the other and the missing) that aren't included, I don't really trust this data's records of the number of victims who fled.__
+
+
+
+# Problem 4 (10 points) -  Answer only one of these (a or b).
+
+a. Describe the relationship between the variables "body camera" and "flee" using a stacked barplot. What can you conclude from this relationship? 
+
+*Hint 1: The categories along the x-axis are the options for "flee", each bar contains information about whether the police officer had a body camera (vertically), and the height along the y-axis shows the frequency of that category).*
+
+*Hint 2: Also, if you are unsure about the syntax for barplot, run ?barplot in R and see some examples at the bottom of the documentation. This is usually a good way to look up the syntax of R code. You can also Google it.*
+
+
+```{r}
+
+```
+
+__Your answer here.__
+
+b. Describe the relationship between age and race by using a boxplot. What can you conclude from this relationship? 
+
+*Hint 1: The categories along the x-axis are the race categories and the height along the y-axis is age.* 
+
+*Hint 2: Also, if you are unsure about the syntax for boxplot, run ?boxplot in R and see some examples at the bottom of the documentation. This is usually a good way to look up the syntax of R code. You can also Google it.*
+
+
+```{r}
+table(dat$race,dat$age)
+tab.raceage <- table(dat$race,dat$age)
+barplot(tab.raceage,
+        main = "Barchart of Age and Race",
+        xlab = "Race Categories", ylab = "Age",
+        legend.text = rownames(tab.raceage),
+        beside = FALSE) # Stacked bars (default)
+```
+```{r}
+table(dat$age,dat$race)
+tab.raceage <- table(dat$age,dat$race)
+barplot(tab.raceage,
+        main = "Barchart of Age and Race",
+        xlab = "Race Categories", ylab = "Age",
+        legend.text = rownames(tab.raceage),
+        beside = FALSE) # Stacked bars (default)
+      
+```
+__Disregard first histogram. THere is a great number of older black and hispanic victims. There is also a great deal of victims whose races are not clarified, which is problematic in making a conclusion of the types of victims that are killed at the hands of police. White males however represent the group with the oldest victims killed by police. __
+
+
+# Extra credit (10 points)
+
+a. What does this code tell us? 
+
+```{r, eval=FALSE}
+mydates <- as.Date(dat$date)
+head(mydates)
+(mydates[length(mydates)] - mydates[1])
+```
+
+b. On Friday, a new report was published that was described as follows by The Guardian: "More than half of US police killings are mislabelled or not reported, study finds." Without reading this article now (due to limited time), why do you think police killings might be mislabelled or underreported?
+
+c. Regarding missing values in problem 4, do you see any? If so, do you think that's all that's missing from the data?
+
+This code arranges my data into the dates during which the cases occured.The last line of the code tells us the time difference. They might be mislabelled or underreported because so much of the data in this data set are either missing or unclear so that you can't make clear conclusions of the rate of police killings. There are missing data points in problem 4, however I don't think that's all that is missing, if the rest of the data frame is any indication. 
+
