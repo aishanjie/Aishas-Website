@@ -502,6 +502,14 @@ ggplot(dat, aes(map_id=state, fill=Murder)) +
 ##      4  6  7  8  9 10 11 12 13 14 15 16 17
 ##   1  1  1  1  0  1  1  3  3 14 10 33 14  9
 ##   2  1  0  0  2  6  2  3  4 13  6 29 10  4</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   mjage cigage iralcage age2 sexatract speakengl irsex
+## 1    14     50       14   16         1         1     1
+## 2    11     14        5   13         2         1     2
+## 3    12     35       12   15         2         1     2
+## 4    16     18       18   14         1         1     1
+## 5    14     16       14   16         4         1     1
+## 6    12     16       18   15         4         1     2</code></pre>
 <pre class="r"><code>tab.agesex &lt;- table(dat$irsex,dat$age2)
 barplot(tab.agesex,
         main = &quot;Stacked barchart&quot;,
@@ -541,6 +549,14 @@ barplot(tab.agesex,
 ##   32 0 0 0 0 0  0  0  0  0  0  0  0  1
 ##   33 0 0 0 0 0  0  0  0  0  1  0  0  0
 ##   35 0 0 0 0 0  0  0  0  0  0  1  0  0</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   mjage cigage iralcage age2 sexatract speakengl irsex
+## 1    14     50       14   16         1         1     1
+## 2    11     14        5   13         2         1     2
+## 3    12     35       12   15         2         1     2
+## 4    16     18       18   14         1         1     1
+## 5    14     16       14   16         4         1     1
+## 6    12     16       18   15         4         1     2</code></pre>
 <pre class="r"><code>tab.agemjage &lt;- table(dat$mjage,dat$age2)
 barplot(tab.agemjage,
         main = &quot;Stacked barchart&quot;,
@@ -572,6 +588,14 @@ barplot(tab.agemjage,
 ##   35  0  0  0  0  0  0  0  0  0  0  1  0  0
 ##   45  0  0  0  0  0  0  0  0  0  0  0  0  1
 ##   50  0  0  0  0  0  0  0  0  0  0  0  1  0</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   mjage cigage iralcage age2 sexatract speakengl irsex
+## 1    14     50       14   16         1         1     1
+## 2    11     14        5   13         2         1     2
+## 3    12     35       12   15         2         1     2
+## 4    16     18       18   14         1         1     1
+## 5    14     16       14   16         4         1     1
+## 6    12     16       18   15         4         1     2</code></pre>
 <pre class="r"><code>tab.agecigage &lt;- table(dat$cigage,dat$age2)
 barplot(tab.agecigage,
         main = &quot;Stacked barchart&quot;,
@@ -600,6 +624,14 @@ barplot(tab.agecigage,
 ##   20  0  0  0  0  0  0  1  0  0  0  0  0  1
 ##   21  0  0  0  0  0  0  1  0  3  2  0  0  0
 ##   23  0  0  0  0  0  0  0  0  0  0  1  0  0</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   mjage cigage iralcage age2 sexatract speakengl irsex
+## 1    14     50       14   16         1         1     1
+## 2    11     14        5   13         2         1     2
+## 3    12     35       12   15         2         1     2
+## 4    16     18       18   14         1         1     1
+## 5    14     16       14   16         4         1     1
+## 6    12     16       18   15         4         1     2</code></pre>
 <pre class="r"><code>tab.ageiralcage &lt;- table(dat$iralcage,dat$age2)
 barplot(tab.ageiralcage,
         main = &quot;Stacked barchart&quot;,
@@ -622,6 +654,14 @@ barplot(tab.ageiralcage,
 ##   5   2  1
 ##   6   1  0
 ##   99  2  1</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   mjage cigage iralcage age2 sexatract speakengl irsex
+## 1    14     50       14   16         1         1     1
+## 2    11     14        5   13         2         1     2
+## 3    12     35       12   15         2         1     2
+## 4    16     18       18   14         1         1     1
+## 5    14     16       14   16         4         1     1
+## 6    12     16       18   15         4         1     2</code></pre>
 <pre class="r"><code>tab.irsexatract &lt;- table(dat$sexatract,dat$irsex)
 barplot(tab.irsexatract,
         main = &quot;Stacked barchart&quot;,
@@ -640,6 +680,14 @@ barplot(tab.irsexatract,
 ##   1 84 77
 ##   2  7  1
 ##   3  0  2</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   mjage cigage iralcage age2 sexatract speakengl irsex
+## 1    14     50       14   16         1         1     1
+## 2    11     14        5   13         2         1     2
+## 3    12     35       12   15         2         1     2
+## 4    16     18       18   14         1         1     1
+## 5    14     16       14   16         4         1     1
+## 6    12     16       18   15         4         1     2</code></pre>
 <pre class="r"><code>tab.irsexspeakengl &lt;- table(dat$speakengl,dat$irsex)
 barplot(tab.irsexspeakengl,
         main = &quot;Stacked barchart&quot;,
@@ -661,7 +709,29 @@ barplot(tab.irsexspeakengl,
 <li><p>Download the README.md file. This is the codebook.</p></li>
 <li><p>Load the data into an R data frame.</p></li>
 </ol>
-<pre class="r"><code>dat &lt;- read.csv(&quot;fatal-police-shootings-data.csv&quot;)</code></pre>
+<pre class="r"><code>dat &lt;- read.csv(&quot;fatal-police-shootings-data.csv&quot;)
+head(dat)</code></pre>
+<pre><code>##   id               name       date  manner_of_death      armed age gender race
+## 1  3         Tim Elliot 2015-01-02             shot        gun  53      M    A
+## 2  4   Lewis Lee Lembke 2015-01-02             shot        gun  47      M    W
+## 3  5 John Paul Quintero 2015-01-03 shot and Tasered    unarmed  23      M    H
+## 4  8    Matthew Hoffman 2015-01-04             shot toy weapon  32      M    W
+## 5  9  Michael Rodriguez 2015-01-04             shot   nail gun  39      M    H
+## 6 11  Kenneth Joe Brown 2015-01-04             shot        gun  18      M    W
+##            city state signs_of_mental_illness threat_level        flee
+## 1       Shelton    WA                    True       attack Not fleeing
+## 2         Aloha    OR                   False       attack Not fleeing
+## 3       Wichita    KS                   False        other Not fleeing
+## 4 San Francisco    CA                    True       attack Not fleeing
+## 5         Evans    CO                   False       attack Not fleeing
+## 6       Guthrie    OK                   False       attack Not fleeing
+##   body_camera longitude latitude is_geocoding_exact
+## 1       False  -123.122   47.247               True
+## 2       False  -122.892   45.487               True
+## 3       False   -97.281   37.695               True
+## 4       False  -122.422   37.763               True
+## 5       False  -104.692   40.384               True
+## 6       False   -97.423   35.877               True</code></pre>
 </div>
 <div id="problem-1-10-points" class="section level1">
 <h1>Problem 1 (10 points)</h1>
@@ -782,6 +852,28 @@ barplot(tab.irsexspeakengl,
 ##                                1                                1 
 ##                           wrench 
 ##                                1</code></pre>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##   id               name       date  manner_of_death      armed age gender race
+## 1  3         Tim Elliot 2015-01-02             shot        gun  53      M    A
+## 2  4   Lewis Lee Lembke 2015-01-02             shot        gun  47      M    W
+## 3  5 John Paul Quintero 2015-01-03 shot and Tasered    unarmed  23      M    H
+## 4  8    Matthew Hoffman 2015-01-04             shot toy weapon  32      M    W
+## 5  9  Michael Rodriguez 2015-01-04             shot   nail gun  39      M    H
+## 6 11  Kenneth Joe Brown 2015-01-04             shot        gun  18      M    W
+##            city state signs_of_mental_illness threat_level        flee
+## 1       Shelton    WA                    True       attack Not fleeing
+## 2         Aloha    OR                   False       attack Not fleeing
+## 3       Wichita    KS                   False        other Not fleeing
+## 4 San Francisco    CA                    True       attack Not fleeing
+## 5         Evans    CO                   False       attack Not fleeing
+## 6       Guthrie    OK                   False       attack Not fleeing
+##   body_camera longitude latitude is_geocoding_exact
+## 1       False  -123.122   47.247               True
+## 2       False  -122.892   45.487               True
+## 3       False   -97.281   37.695               True
+## 4       False  -122.422   37.763               True
+## 5       False  -104.692   40.384               True
+## 6       False   -97.423   35.877               True</code></pre>
 <p><strong>I am surprised to see that toy weapon, binoculars, and microphone qualify a victim as “armed.” None of these items are intended for harm, and even if attempted would probably not do much damage. Of course, the codebook does state that any item that the officer “believes” could do harm to him is included. His belief won’t always be valid, as was the case for several of these cases. </strong></p>
 </div>
 <div id="problem-2-10-points" class="section level1">
