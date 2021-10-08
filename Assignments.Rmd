@@ -252,6 +252,7 @@ Answer: This sample is nearly balanced, there are 91 participants that identify 
 
 ```{r, eval=TRUE}
 table(dat$irsex,dat$age2)
+head(dat)
 tab.agesex <- table(dat$irsex,dat$age2)
 barplot(tab.agesex,
         main = "Stacked barchart",
@@ -275,6 +276,7 @@ Individuals tend to use alcohol earliest.
 
 ```{r}
 table(dat$mjage,dat$age2)
+head(dat)
 tab.agemjage <- table(dat$mjage,dat$age2)
 barplot(tab.agemjage,
         main = "Stacked barchart",
@@ -287,6 +289,7 @@ Earliest age range is 8.
 
 ```{r}
 table(dat$cigage,dat$age2)
+head(dat)
 tab.agecigage <- table(dat$cigage,dat$age2)
 barplot(tab.agecigage,
         main = "Stacked barchart",
@@ -299,6 +302,7 @@ Earliest age range is 10.
 
 ```{r}
 table(dat$iralcage,dat$age2)
+head(dat)
 tab.ageiralcage <- table(dat$iralcage,dat$age2)
 barplot(tab.ageiralcage,
         main = "Stacked barchart",
@@ -315,6 +319,7 @@ What does the distribution of sexual attraction look like? Is this what you expe
 
 ```{r}
 table(dat$sexatract,dat$irsex)
+head(dat)
 tab.irsexatract <- table(dat$sexatract,dat$irsex)
 barplot(tab.irsexatract,
         main = "Stacked barchart",
@@ -331,6 +336,7 @@ What does the distribution of English speaking look like in the sample? Is this 
 
 ```{r}
 table(dat$speakengl,dat$irsex)
+head(dat)
 tab.irsexspeakengl <- table(dat$speakengl,dat$irsex)
 barplot(tab.irsexspeakengl,
         main = "Stacked barchart",
@@ -358,6 +364,7 @@ c. Download the README.md file. This is the codebook.
 d. Load the data into an R data frame.
 ```{r}
 dat <- read.csv("fatal-police-shootings-data.csv")
+head(dat)
 ```
 
 
@@ -378,6 +385,7 @@ __"body_camera" indicates whether the officer was wearing a body camera (represe
 d. What are three weapons that you are surprised to find in the "armed" variable? Make a table of the values in "armed" to see the options.
 ```{r}
 table(dat$armed)
+head(dat)
 ```
 
 __I am surprised to see that toy weapon, binoculars, and microphone qualify a victim as "armed." None of these items are intended for harm, and even if attempted would probably not do much damage. Of course, the codebook does state that any item that the officer "believes" could do harm to him is included. His belief won't always be valid, as was the case for several of these cases. __ 
@@ -403,6 +411,7 @@ __I would use the median because the center of distribution is the median wherea
 c. Describe the gender distribution of the sample. Do you find this surprising?
 ```{r}
 table(dat$gender)
+head(dat)
 tab.gender <- table(dat$gender)
 barplot(tab.gender,
         main = "Stacked barchart",
@@ -420,6 +429,7 @@ a. How many police officers had a body camera, according to news reports? What p
 
 ```{r}
 table(dat$body_camera)
+head(dat)
 ```
 
 __910 police officers had a body camera, according to news reports.This is 13.6 % of all police officers. That is really surprising! It seems that having a body camera would be a measure of precaution for the officer that should be required, unless it is widely acknowledged that police often kill civilians for no just reason and so evidence on the body cameras would be damaging for the officers and that's the reason why they are not required or at least not worn.  __
@@ -427,6 +437,7 @@ __910 police officers had a body camera, according to news reports.This is 13.6 
 b. In  how many of the incidents was the victim fleeing? What proportion is this of the total number of incidents in the data? Is this what you would expect?
 ```{r}
 table(dat$flee)
+head(dat)
 tab.flee <- table(dat$flee)
 barplot(tab.flee,
         main = "Barchart of Victims' Mode of Fleeing",
@@ -447,11 +458,6 @@ a. Describe the relationship between the variables "body camera" and "flee" usin
 
 *Hint 2: Also, if you are unsure about the syntax for barplot, run ?barplot in R and see some examples at the bottom of the documentation. This is usually a good way to look up the syntax of R code. You can also Google it.*
 
-
-```{r}
-
-```
-
 __Your answer here.__
 
 b. Describe the relationship between age and race by using a boxplot. What can you conclude from this relationship? 
@@ -463,6 +469,7 @@ b. Describe the relationship between age and race by using a boxplot. What can y
 
 ```{r}
 table(dat$race,dat$age)
+head(dat)
 tab.raceage <- table(dat$race,dat$age)
 barplot(tab.raceage,
         main = "Barchart of Age and Race",
@@ -472,6 +479,7 @@ barplot(tab.raceage,
 ```
 ```{r}
 table(dat$age,dat$race)
+head(dat)
 tab.raceage <- table(dat$age,dat$race)
 barplot(tab.raceage,
         main = "Barchart of Age and Race",
