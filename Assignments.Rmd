@@ -1202,5 +1202,5 @@ Describe the dataset. Considering our lecture on data ethics, what concerns do y
 
 __I believe that there is not enough consideration of the racial biases within policing. The data only accounts for two distinct factors with no acknowledgement of several, oustanding factors such as location of the police departments, races of the individuals involved in the instances of police brutality, etc. The issue of police brutality is not merely an economic issue Essentially, the data set does not reflect the real social, racial, and economic implications of policing, creating an incomplete dataset and therefore weak conclusion.  .__
 
-  
+  test
   
