@@ -17,7 +17,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 This page will contain all the assignments you submit for the class.
 
-
 ### Instructions for all assignments
 
 I want you to submit your assignment as a PDF, so I can keep a record of what the code looked like that day. I also want you to include your answers on your personal GitHub website. This will be good practice for editing your website and it will help you produce something you can keep after the class is over.
@@ -31,7 +30,6 @@ I want you to submit your assignment as a PDF, so I can keep a record of what th
 4. Produce a PDF file with your answers. To do this, knit to PDF (use Knit button at the top of RStudio), locate the PDF file in your docs folder (it's in the same folder as the Rproj), and submit that on on Canvas in Assignment 1.
 
 5. Build Website, go to GitHub desktop, commit and push. Now your solutions should be on your website as well.
-
 
 
 # Assignment 1
@@ -1202,5 +1200,6 @@ Describe the dataset. Considering our lecture on data ethics, what concerns do y
 
 __I believe that there is not enough consideration of the racial biases within policing. The data only accounts for two distinct factors with no acknowledgement of several, oustanding factors such as location of the police departments, races of the individuals involved in the instances of police brutality, etc. The issue of police brutality is not merely an economic issue Essentially, the data set does not reflect the real social, racial, and economic implications of policing, creating an incomplete dataset and therefore weak conclusion.  .__
 
-  test
+  testt
+  
   
